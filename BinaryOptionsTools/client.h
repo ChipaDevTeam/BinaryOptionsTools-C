@@ -10,4 +10,12 @@
 #define ORIGIN         "https://pocketoption.com"
 #define USER_AGENT     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/
 
+static int callback(struct lws *wsi, enum lws_callback_reasons reason,
+                    void *user, void *in, size_t len) {
+    return 0;
+}
+
+static int interrupted = 0;
+
+
 #endif // CLIENT_H
