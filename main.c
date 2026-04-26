@@ -4,8 +4,7 @@
 #include "BinaryOptionsTools/client.h"
 
 int main() {
-
-    wsclient = WsClient();
+    WsClient wsclient = WsClient_new();
     
     return 0;
 }
