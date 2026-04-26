@@ -20,6 +20,26 @@ static int callback(struct lws *wsi, enum lws_callback_reasons reason,
 }
 
 int main() {
-    printf("Hello, World!\n");
+    struct lws_context_creation_info info;
+    struct lws_context *context;
+
+    memset(&info, 0, sizeof(info));
+    info.port = 8080;
+    info.protocols = (struct lws_protocols[]) {
+        { "http", callback, 0, 0 },
+        { NULL, NULL, 0, 0 }
+    };
+    
+    context = lws_create_context(&info);
+    if (!context) {
+        fprintf(stderr, "Failed to create context\n");
+        return 1;
+    }
+
+    while (1) {
+        lws_service(context, 1000);
+    }
+
+    lws_context_destroy(context);
     return 0;
 }
