@@ -3,9 +3,9 @@
 #include <libwebsockets.h>
 #include "BinaryOptionsTools/client.h"
 
-wsclient = WsClient();
-
 int main() {
+
+    wsclient = WsClient();
     
     return 0;
 }
