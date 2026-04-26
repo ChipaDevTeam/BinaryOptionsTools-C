@@ -2,3 +2,5 @@
 #include <string.h>
 #include <libwebsockets.h>
 
+#include "client.h"
+
