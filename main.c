@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <libwebsockets.h>
+#include "BinaryOptionsTools/client.h"
 
-#include "client.h"
+wsclient = WsClient();
 
 int main() {
-    WsClient();
+    
     return 0;
 }

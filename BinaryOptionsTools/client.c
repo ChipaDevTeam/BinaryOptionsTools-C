@@ -3,6 +3,7 @@
 #include <libwebsockets.h>
 
 #include "client.h"
+
 void WsClient() {
     struct lws_context_creation_info info;
     memset(&info, 0, sizeof(info));
