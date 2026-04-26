@@ -61,4 +61,11 @@ static int callback(struct lws *wsi, enum lws_callback_reasons reason,
     return 0;
 }
 
+typedef struct {
+    struct lws_context *context;
+    struct lws *wsi;
+} WsClient;
+
+WsClient WsClient_new();
+
 #endif // CLIENT_H
